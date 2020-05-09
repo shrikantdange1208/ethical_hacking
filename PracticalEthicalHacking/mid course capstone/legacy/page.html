@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Legacy</title>
+</head><body><b>Legacy : cve-2008-4250 (Smb Vulnerability in Windows XP SP3), ms<br/>
+<br/>
+nmap -T4 -p- -A 10.10.10.4<br/>
+<br/>
+</b><img src="legacy_nmap_ports.png" /><br/>
+<br/>
+<img src="legacy_nmap_ports 2.png" /><br/>
+<br/>
+<br/>
+Computer Name: LEGACY &nbsp; &nbsp;OS: Windows XP<br/>
+<img src="legacy_nmap_host_script.png" width="750" height="333" /><br/>
+<br/>
+SMBClient<br/>
+Not able to connect - So a dead end.<br/>
+<img src="legacy_smbclient.png" /><br/>
+<br/>
+<img src="legacy_ms_smb_version.png" width="800" height="301" /><br/>
+<br/>
+<img src="legacy_ms_smb_scan.png" width="800" height="370" /><br/>
+<br/>
+SMB Exploit for Windows XP SP3:<br/>
+https://www.rapid7.com/db/modules/exploit/windows/smb/ms08_067_netapi<br/>
+<br/>
+<img src="legacy_ms_smb_ms08_067_netapi.png" width="750" height="360" /><br/>
+<br/>
+<img src="legacy_ms_smb_ms08_067_netapi_meterprete.png" width="750" height="244" /><br/>
+<br/>
+Detects it is Windows XP - Service Pack 3<br/>
+Above exploit created a reverse shell. We setup a listener (10.10.10.14:4444) and tell the victim machine to connect back to us. <br/>
+Server Username: NT AUTHORITY\SYSTEM &nbsp; (Highest level - We have owned this machine completely)<br/>
+<br/>
+<img src="legacy_ms_smb_ms08_067_netapi_sysinfo.png" /><br/>
+<br/>
+Shell<br/>
+<br/>
+<img src="legacy_ms_smb_ms08_067_netapi_shell.png" /><br/>
+<br/>
+Flags<br/>
+<br/>
+<img src="legacy_ms_smb_ms08_067_netapi_flags.png" /><br/>
+<br/>
+</body></html>

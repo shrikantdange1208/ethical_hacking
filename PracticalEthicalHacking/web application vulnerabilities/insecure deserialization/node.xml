@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>Insecure Deserialization</string>
+  <key>nodeid</key><string>0d824eb3-05cd-4767-8475-b713d939cfd4</string>
+  <key>modified_time</key><integer>1588833531</integer>
+  <key>version</key><integer>6</integer>
+  <key>content_type</key><string>text/xhtml+xml</string>
+  <key>created_time</key><integer>1588833531</integer>
+  <key>order</key><integer>8</integer>
+</dict>
+</node>

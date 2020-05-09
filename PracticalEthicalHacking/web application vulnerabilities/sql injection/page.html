@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>SQL Injection</title>
+</head><body>Inject Malicious SQL statements<br/>
+<br/>
+SELECT<br/>
+INSERT<br/>
+DELETE <br/>
+UPDATE<br/>
+DROP<br/>
+UNION<br/>
+<br/>
+WHERE<br/>
+AND/OR/NOT<br/>
+ORDER BY<br/>
+<br/>
+<br/>
+Input: test<br/>
+SQL: SELECT * from Users WHERE email='test';<br/>
+<br/>
+Input: test'<br/>
+SQL: SELECT * from Users WHERE email=<b>'</b>test<b>''</b>;<br/>
+<br/>
+Input: "test' OR 1=1; --<br/>
+SQL: SELECT * from Users WHERE email=<b>'</b>test<b>' OR 1=1</b>; --';<br/>
+NOTE: --'; comments everything after 1=1</body></html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Active Directory Lab Requirements</title>
+</head><body>- 1 Windows Server 2019<br/>
+- 2 Windows 10 Enterprise<br/>
+<br/>
+Requirements:<br/>
+60 GB Disk Space<br/>
+16gb RAM<br/>
+<br/>
+<b>Domain Controller</b><br/>
+<br/>
+Window Server 2019 <br/>
+<br/>
+PC Name - HYDRA-DC<br/>
+Administrator Account<br/>
+Username - Administrator<br/>
+Password - P@$$w0rd!<br/>
+<br/>
+<b>Add roles and features:<br/>
+<br/>
+Server Roles - Acitve Directory Domain Services<br/>
+<br/>
+<img src="image.png" width="550" height="395" /><br/>
+<br/>
+<br/>
+</b>Add a new Forest:<br/>
+Root Domain Name: MARVEL.local<br/>
+Password for Directory Services restore mode: P@$$w0rd!<br/>
+<br/>
+<b>2 User Machines<br/>
+</b>- 2 Windows 10 Enterprise<br/>
+<br/>
+1st Machine:<br/>
+Domain Join Instead<br/>
+User - Frank Castle<br/>
+Pass - Password1<br/>
+PC Name - THEPUNISHER<br/>
+<br/>
+2nd Machine<br/>
+<br/>
+<br/>
+<b>Configuring Domain Controller: Setting up Users, Groups and Policies<br/>
+</b>1. Create User <br/>
+&nbsp; &nbsp; - Frank Castle<br/>
+&nbsp; &nbsp; - Username: fcastle<br/>
+&nbsp; &nbsp; - Passwor: Password1<br/>
+<br/>
+2. Create Administrator <br/>
+&nbsp; &nbsp; - Tony Stark<br/>
+&nbsp; &nbsp; - Username: tstark<br/>
+&nbsp; &nbsp; - Passwor: Password2019!@#<br/>
+<b><br/>
+</b>3. Create User <br/>
+&nbsp; &nbsp; - Peter Parker<br/>
+&nbsp; &nbsp; - Username: pparker<br/>
+&nbsp; &nbsp; - Passwor: Password2<br/>
+<br/>
+4. Create Administrator - Service Account (Service Accounts should never be Domain Administrator) <br/>
+&nbsp; &nbsp; - SQL Service<br/>
+&nbsp; &nbsp; - Username: SQLService<br/>
+&nbsp; &nbsp; - Passwor: MYpassword123#<br/>
+&nbsp; &nbsp; - Description: My password is MYpassword123#<br/>
+<br/>
+5. Setup File Share<br/>
+&nbsp; &nbsp; - Opens up 139 and 445 ports<br/>
+<br/>
+6. Create an SPN (Service Principal Name)<br/>
+&nbsp; &nbsp; - setspn -a HYDRA-DC/SQLService.MARVEL.local: 60111 MARVEL\SQLService<br/>
+&nbsp; &nbsp; &nbsp; <img src="image 2.png" /><br/>
+<br/>
+<b>Joining machines to the Domain:<br/>
+<br/>
+THEPUNISHER: Frank Castle<br/>
+SPIDERMAN: Peter Parker<br/>
+<br/>
+</b>- Create a share folder<br/>
+- Network and Sharing Options -&gt; Network Connections -&gt; Ethernet0 -&gt; Properties -&gt; IPV4<br/>
+&nbsp; DNS -&gt; Domain Controller IP Address<br/>
+<b><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</b></body></html>

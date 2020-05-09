@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Active Directory Overview</title>
+</head><body>What is Active Directoy?<br/>
+<br/>
+Developed by Microsoft. It is like a phone book. Stores information.<br/>
+You can have 1 username and password. You use same username and password to access different applications.<br/>
+Authentication is done using Kerberos tickets.<br/>
+Non-windows devices, such as Linux machines, firewalls, etc. can also authenticate to Active Directory using RADIUS or LDAP<br/>
+<br/>
+<br/>
+Why Active Directory?<br/>
+1. Common Identity Management Service<br/>
+2. Can be exploited without ever attacking patchable exploits.<br/>
+&nbsp; &nbsp; Instead, we abuse features, trusts, components and more.<br/>
+<br/>
+<b>Physical Active Directory Components:</b><br/>
+<br/>
+<b>Domain Controller:</b><br/>
+&nbsp; Host a copy of AD Domain Services (DS) directory store.<br/>
+&nbsp; Provides authentication and authorizaton.<br/>
+&nbsp; Replicate updates to other domain controllers in the domain and forest<br/>
+&nbsp; Allow admin access to manage user accounts and network resources.<br/>
+&nbsp; <br/>
+<b>The AD DS data store</b>:<br/>
+&nbsp; Consists of Ntds.dit file<br/>
+&nbsp; Default location %SystemRoot%\NTDS folder on all domain server (Contains all uses, objects, groups,etc. Also contains all password hashes in that domain)<br/>
+&nbsp; Is accessible only through the domain controller processes and protocols<br/>
+<br/>
+<b>Logical Active Directory Components:<br/>
+<br/>
+AD DS Schema<br/>
+</b><b>&nbsp; </b>Rule book or a blue print.<br/>
+&nbsp; Defines every object that can be created in AD.<br/>
+&nbsp; Enforces rules regarding object creation and configuration<br/>
+<br/>
+<b>Domains<br/>
+</b><b>&nbsp; </b>Used to group and manage objects in an org.<br/>
+&nbsp; Administrative boundary for applying policies to groups of objects<br/>
+&nbsp; Replication boundary for replicating data between domain controllers<br/>
+&nbsp; Authentication and Authorization boundary that provides a way to limit the scope of access to resources.<br/>
+<br/>
+<b>Trees<br/>
+</b>&nbsp; Group of domains<br/>
+&nbsp; Domain tree is heirarchy of domains in AD DS.<br/>
+&nbsp; Share a contiguous namespace with parent domain<br/>
+&nbsp; Can have addiitional child domains<br/>
+&nbsp; Creates a two-way transitive trust with other domains<br/>
+<br/>
+<b>Forests<br/>
+</b>&nbsp; Collection of trees.<br/>
+&nbsp; Share a common schema.<br/>
+&nbsp; Share a common configuration<br/>
+&nbsp; Share some global catalog to enable searching<br/>
+&nbsp; Enable trusts between all domains in the forest<br/>
+&nbsp; Share the Enterprise Admins and Schema Admin groups<br/>
+&nbsp; <br/>
+<b>Organizational Units (OU)</b>&nbsp; <br/>
+&nbsp; OU and AD containers that can contain users, groups,computers and other OUs.<br/>
+&nbsp; &nbsp;Represents organization hierarchically and logically<br/>
+&nbsp; &nbsp;Delegate permissions to administer groups of objects<br/>
+&nbsp; &nbsp;Apply policies<br/>
+<br/>
+<b>Trusts<br/>
+<br/>
+</b>&nbsp; Provides mechanism for users to gain access to resources in another domain &nbsp;<br/>
+&nbsp; Directional Trusts - Follows from trusting domain to trusted domain <br/>
+&nbsp; Transitive Trusts - Relationship is extended beyond a two-domain trust to include other trusted domains.<br/>
+<br/>
+All domains in forest trust all other domains in the forest<br/>
+Trusts ca extend outside the forest<br/>
+<br/>
+<b>Objects<br/>
+</b>&nbsp;User<br/>
+&nbsp;InetOrgPerson<br/>
+&nbsp;Contacts<br/>
+&nbsp;Groups<br/>
+&nbsp;Computers<br/>
+&nbsp;Printers<br/>
+&nbsp;Shared Folders<br/>
+<b><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</b><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<b><br/>
+<br/>
+<br/>
+<br/>
+</b><br/>
+&nbsp; <br/>
+&nbsp; <br/>
+<br/>
+<br/>
+<br/>
+<br/>
+&nbsp;</body></html>

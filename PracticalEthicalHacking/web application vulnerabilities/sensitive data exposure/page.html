@@ -1,0 +1,16 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Sensitive Data Exposure</title>
+</head><body>Check Response Headers - They tell u what kind of Protections are there<br/>
+One of the Defense is HSTS - Http Strict Transport Security <br/>
+Should be set in order to prevent an attack where we take secure data say https, we strip it, called <b>Protocol Downgrade Attack (Man in the middle attack)</b>&nbsp;and we make it http. This unencrypts the data.<br/>
+<br/>
+Use securityheaders.com to analyze what protections are present for a website.<br/>
+<br/>
+Look at level of encryption on a website:<br/>
+nmap -script=ssl-enum-ciphers -p 443 tesla.com<br/>
+<br/>
+<br/>
+</body></html>

