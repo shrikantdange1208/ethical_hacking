@@ -2,6 +2,7 @@
 <node>
 <version>6</version>
 <dict>
+  <key>expanded</key><true/>
   <key>title</key><string>Tools - To Do Imp</string>
   <key>nodeid</key><string>c9e2c0df-e94a-44c8-be68-58a20f4108f9</string>
   <key>modified_time</key><integer>1587490743</integer>

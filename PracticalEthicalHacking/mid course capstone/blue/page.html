@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Blue</title>
+</head><body>10.10.10.40<br/>
+<br/>
+MS-17-010 / EternalBlue / WannaCry<br/>
+https://www.rapid7.com/db/modules/exploit/windows/smb/ms17_010_eternalblue<br/>
+<br/>
+<img src="blue_nmap_port_scan.png" /><br/>
+<br/>
+Metasploit exploit:<br/>
+Scanner : auxillary/scanner/smb/smb_ms17_010<br/>
+Exploit : exploit/windows/smb/ms17_010_eternalblue<br/>
+<br/>
+NOTE : This exploit can tip a machine i.e it can be crashed<br/>
+<br/>
+Payload options (generic/shell_reverse_tcp) : This exploit is using<b>&nbsp;Unstaged payload</b>. This payload sends everything in one go.<br/>
+We can also use <b>Staged Payloads</b>. Staged payload sends exploit in stages.<br/>
+<br/>
+Once in meterpreter you can do following things to get more information:<br/>
+1. hashdump<br/>
+2. Open a shell by typing <b>shell</b>&nbsp;command and execute below commands:<ul><li style="list-style-type: none">route print &nbsp;- What does it talks to?</li>
+<li style="list-style-type: none">arp -a &nbsp;</li>
+<li style="list-style-type: none">netstat -ano &nbsp; - Shows what ports are open and what ports we are talking to.</li>
+</ul>
+3. Use load command<br/>
+<img src="meterpreter_load.png" /><br/>
+<ul><li style="list-style-type: none"></li>
+<li style="list-style-type: none"></li>
+</ul>
+<br/>
+Use AutoBlue to exploit MS17_010 manually<br/>
+https://github.com/3ndG4me/AutoBlue-MS17-010<br/>
+<br/>
+<br/>
+<br/>
+</body></html>
